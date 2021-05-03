@@ -401,6 +401,139 @@ At the command prompt, type `nano`.
 
 5.  Update the title to match the name of your website. (5라고 해도 3으로 됨)
 
+# 이미지
+> 사용방법 : `[![로딩 안될때 표시될 이름](이미지 내부URL "이미지에 마우스 올리면 나오는 글자")](이미지 원본 웹 주소)`
+
+[![Tux, the Linux mascot](image/tux.png "펭귄")](https://d33wubrfki0l68.cloudfront.net/e7ed9fe4bafe46e275c807d63591f85f9ab246ba/e2d28/assets/images/tux.png)
+
+# 수평선
+> `***` , `---` , `___` 를 위랑 아래에 빈줄을 만든다음에 넣으면 수평선이 만들어 진다.
+
+```
+Try to put a blank line before...
+
+---
+
+...and after a horizontal rule.
+```
+
+Try to put a blank line before...
+
+---
+
+...and after a horizontal rule.
+
+# 링크
+> 사용법 : `[어떤 URL인지 설명](URL "하이퍼링크된곳에 마우스 올리면 나오는 글자")`
+```
+My favorite search engine is [Google](https://www.google.co.kr "구글")
+```
+My favorite search engine is [Google](https://www.google.co.kr "구글")
+
+> URL과 이메일주소를 빠르게 링크로 바꾸고 싶으면 꺽새("<" ">")에 넣으면 된다.
+```
+<https://www.markdownguide.org>
+<fake@example.com>
+```
+
+<https://www.markdownguide.org>
+
+<fake@example.com>
+
+## 링크 강조
+> `**`로 감싸면 굵어지고 `*`로 감싸면 이태릭체가 된다. 링크가 코드임을 알리고 싶으면 주소에 대한 설명 부분을 백틱(`)으로 감싸주면 된다.
+
+```
+I love supporting the **[EFF](https://eff.org)**.
+
+This is the *[Markdown Guide](https://www.markdownguide.org)*.
+
+See the section on [`code`](#code).
+```
+
+I love supporting the **[EFF](https://eff.org)**.
+
+This is the *[Markdown Guide](https://www.markdownguide.org)*.
+
+See the section on [`code`](#code).
+
+# 레퍼런스 스타일 링크
+
+> 레퍼런스 스타일 링크는 두가지 부분으로 나뉜다. 첫번째부분은 `[hobbit-hole][1]` 두번째 부분은 `[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle` 이런식으로 하면 hobbit-hole를 클릭하면 1번라벨의 주소로 가게 된다. 다음은 두번째부분의 링크 예시이다. 차이를 글로 쓰는것 보다 밑의 예시를 보고 이렇구나 하고 넘어가면 좋겠다.
+
+```
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle 'Hobbit lifestyles'
+[1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle (Hobbit lifestyles)
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> 'Hobbit lifestyles'
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> (Hobbit lifestyles)
+```
+
+> 다음은 레퍼런스 스타일의 적절한 예시이다.
+```
+In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole][1], and that means comfort.
+
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+```
+
+In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole][1], and that means comfort.
+
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+
+> 주의사항 : URL에 공백이 있다면 공백을 `%20` 으로 매꿔줘야한다.
+
+```
+[link](https://www.example.com/my%20great%20page)
+```
+
+[link](https://www.example.com/my%20great%20page)
+
+# 탈출 문자
+> `*` 는 순서없는 리스트에서 쓰이기 때문에 그냥 `*` 를 쓰고싶다면 앞에 `\` 를 붙여서 쓰면 `*` 가 나온다.
+
+```
+\* Without the backslash, this would be a bullet in an unordered list.
+```
+
+\* Without the backslash, this would be a bullet in an unordered list.
+
+> 백슬래시와 같이 쓸 수 있는 문자들
+
+| Character | Name |
+| ---- | ----|
+| \\ | backslash |
+| \' | backtick |
+| \* | asterisk |
+| \_ | underscore |
+| \{ \} | curly braces |
+| \[ \] | brackets |
+| \< \> | angle brackets |
+| \( \) | parentheses |
+| \# | pound sign |
+| \+ | plus sign |
+| \- | minus sign |
+| \. | dot |
+| \! | exclamation mark |
+| \| | pipe |
+
+# HTML
+> 마크다운에서 전부는 아니지만 일부 HTML 태그를 사용할 수 있다.
+
+```
+This **word** is bold. This <em>word</em> is italic.
+```
+
+This **word** is bold. This <em>word</em> is italic.
+
+# 깃허브 주소
+> https://github.com/TaeWoonJeong/Markdown
+
 # 확장 문법
 - 비쥬얼스튜디오코드에서는 적용이 안되는 것도 있음 깃허브에 가면 적용됨.
 
